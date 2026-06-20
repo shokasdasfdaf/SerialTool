@@ -12,6 +12,10 @@ public:
     static constexpr quint8 FRAME_HEADER1 = 0x55;
     static constexpr int MIN_FRAME_LEN = 5;  // header(2) + len(1) + data(1+) + checksum(1)
 
+    // 接收缓冲区最大长度，超过则丢弃旧数据保留尾部
+    // 防止串口持续输出乱码导致内存无限增长
+    static constexpr int MAX_BUFFER_SIZE = 64 * 1024;
+
     struct Frame {
         bool valid = false;
         QByteArray data;
