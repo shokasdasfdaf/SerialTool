@@ -1,0 +1,38 @@
+# Build
+build/
+build-*/
+*.o
+*.obj
+*.moc
+*.exe
+*.dll
+*.a
+*.lib
+*.ilk
+*.pdb
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+
+# IDE
+.vs/
+.idea/
+.vscode/
+*.user
+*.pro.user
+CMakeLists.txt.user
+CMakeUserPresets.json
+.qtcreator/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 第三方安装包
+Setup_com0com_*.exe
+
+# 个人面试备忘录
+code_review_notes.md
+
+# 本机构建脚本（含个人 MSVC 路径，无通用价值）
+build_serialtool.bat
